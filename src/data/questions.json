@@ -1,28 +1,423 @@
+
 {
-  "questions": [
-    {
-      "image": "harry_potter.jpg",
-      "anwsers": [
-        { "content": "Harry Potter", "isCorrect": true },
-        { "content": "Władca Pierścieni", "isCorrect": false },
-        { "content": "Gra o Tron", "isCorrect": false }
-      ]
-    },
-    {
-      "image": "madagaskar.jpg",
-      "anwsers": [
-        { "content": "Potwory i Spółka", "isCorrect": false },
-        { "content": "Madagaskar", "isCorrect": true },
-        { "content": "Ratatuj", "isCorrect": false }
-      ]
-    },
-    {
-      "image": "matrix.jpg",
-      "anwsers": [
-        { "content": "Szklana Pułapka", "isCorrect": false },
-        { "content": "Zoolander", "isCorrect": false },
-        { "content": "Matrix", "isCorrect": true }
-      ]
-    }
-  ]
-}
+    "questions": [
+      {
+        "image": "harry_potter.jpg",
+        "answers": [
+          { "content": "Harry Potter", "isCorrect": true },
+          { "content": "Władca Pierścieni", "isCorrect": false },
+          { "content": "Gra o Tron", "isCorrect": false }
+        ]
+      },
+      {
+        "image": "madagaskar.jpg",
+        "answers": [
+          { "content": "Potwory i Spółka", "isCorrect": false },
+          { "content": "Madagaskar", "isCorrect": true },
+          { "content": "Ratatuj", "isCorrect": false }
+        ]
+      },
+      {
+        "image": "matrix.jpg",
+        "answers": [
+          { "content": "Szklana Pułapka", "isCorrect": false },
+          { "content": "Zoolander", "isCorrect": false },
+          { "content": "Matrix", "isCorrect": true }
+        ]
+      },
+      {
+        "image": "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/tGwO4xcBjhXC0p5qlkw37TrH6S6.jpg",
+        "answers": [
+          { "content": "Kot w butach: Ostatnie życzenie", "isCorrect": true },
+          { "content": "Kot w butach", "isCorrect": false },
+          { "content": "Shrek 2", "isCorrect": false }
+        ]
+      },
+      {
+        "image": "https://www.themoviedb.org/t/p/original/qnGLBsT3FrSi8d6S4zVSJ7E1unG.jpg",
+        "answers": [
+          { "content": "Czarna Pantera: Wakanda w moim sercu", "isCorrect": true },
+          { "content": "Czarna Pantera", "isCorrect": false },
+          { "content": "Kapitan Ameryka: Wojna Bohaterów", "isCorrect": false }
+        ]
+      },
+      {
+        "image": "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/s16H6tpK2utvwDtzZ8Qy4qm5Emw.jpg",
+        "answers": [
+          { "content": "Avatar: Istota wody", "isCorrect": true },
+          { "content": "Avengers", "isCorrect": false },
+          { "content": "Strażnicy Galaktyki 2", "isCorrect": false }
+        ]
+      },
+      {
+        "image": "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/d6MhreFdMHONqX3iZlJGCF8UkIt.jpg",
+        "answers": [
+          { "content": "Black Adam", "isCorrect": true },
+          { "content": "Shazam", "isCorrect": false },
+          { "content": "Avengers 2", "isCorrect": false }
+        ]
+      },
+      {
+        "image": "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/pxZidnCeMZ403jhp76CBIb5XRUJ.jpg",
+        "answers": [
+          { "content": "Wolf Hound", "isCorrect": true },
+          { "content": "Top Gun: Maverick", "isCorrect": false },
+          { "content": "1917", "isCorrect": false }
+        ]
+      },
+      {
+        "image": "https://www.themoviedb.org/t/p/original/chauy3iJaZtrMbTr72rgNmOZwo3.jpg",
+        "answers": [
+          { "content": "Predator", "isCorrect": true },
+          { "content": "Avatar vs Obcy", "isCorrect": false },
+          { "content": "Avatar", "isCorrect": false }
+        ]
+      },
+      {
+        "image": "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/53BC9F2tpZnsGno2cLhzvGprDYS.jpg",
+        "answers": [
+          { "content": "Troll", "isCorrect": true },
+          { "content": "Tajemnica gór", "isCorrect": false },
+          { "content": "Olbrzym", "isCorrect": false }
+        ]
+      },
+      {
+        "image": "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/AuV99eQivVWuk2AOSM6hYh9QRPQ.jpg",
+        "answers": [
+          { "content": "Opowieści z Narnii: Lew, Czarownica i stara szafa", "isCorrect": true },
+          { "content": "Opowieści z Narnii 2: Książe Kaspian", "isCorrect": false },
+          { "content": "Zaczarowana szafa", "isCorrect": false }
+        ]
+      },
+      {
+        "image": "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/kBSSbN1sOiJtXjAGVZXxHJR9Kox.jpg",
+        "answers": [
+          { "content": "Top Gun: Maverick", "isCorrect": true },
+          { "content": "1917", "isCorrect": false },
+          { "content": "Battlefield", "isCorrect": false }
+        ]
+      },
+      {
+        "image": "https://www.themoviedb.org/t/p/w500_and_h282_face/aRNMwIvEnYEMwGHLCAACyuq2I1K.jpg",
+        "answers": [
+          { "content": "Spider Man: Bez Drogi do Domu", "isCorrect": true },
+          { "content": "Spider Man 3", "isCorrect": false },
+          { "content": "Avengers: Koniec gry", "isCorrect": false }
+        ]
+      },
+
+      {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/v529QdjxwGKmJycQWnJj6qGSpta.jpg", 
+        "answers": [ 
+          { "content":"Jak wytresować smoka", "isCorrect": true},
+          { "content":"Upadek", "isCorrect": false},
+          { "content":"Braveheart, Waleczne serce", "isCorrect": false}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/nWkxOXpctN2NuToGzwCSdFdiht0.jpg", 
+        "answers": [ 
+          { "content":"Amadeus", "isCorrect": false},
+          { "content":"Monty Python i Święty Graal", "isCorrect": true},
+          { "content":"Anatomia morderstwa", "isCorrect": false}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/S6lLHuyh86V6SDRkSBsbuVTE6n.jpg", 
+        "answers": [ 
+          { "content":"Najlepsze lata naszego życia", "isCorrect": false},
+          { "content":"X-Men: Przeszłość, która nadejdzie", "isCorrect": false},
+          { "content":"Indiana Jones i ostatnia krucjata", "isCorrect": true}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/bR4U9n9YnZOvBUhOUNl316UNEyh.jpg", 
+        "answers": [ 
+          { "content":"Notorious", "isCorrect": false},
+          { "content":"Mechaniczna pomarańcza", "isCorrect": true},
+          { "content":"Full Metal Jacket", "isCorrect": false}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/tZ4SrBztjURQhR0VAmxDE4T7Vto.jpg", 
+        "answers": [ 
+          { "content":"Bez przebaczenia", "isCorrect": true},
+          { "content":"Coś", "isCorrect": false},
+          { "content":"Persona", "isCorrect": false}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/moTOuNKnM2phZCYPF49Y1Hb7WJj.jpg", 
+        "answers": [ 
+          { "content":"Zniewolony", "isCorrect": false},
+          { "content":"Stań przy mnie", "isCorrect": false},
+          { "content":"Paryż, Teksas", "isCorrect": true}
+         ]
+       },    
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/ukJZb0By1JCfR436RAbAQ1O1mMK.jpg", 
+        "answers": [ 
+          { "content":"Tron we krwi", "isCorrect": false},
+          { "content":"Północ,północny zachód", "isCorrect": true},
+          { "content":"Odejście", "isCorrect": false}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/poec6RqOKY9iSiIUmfyfPfiLtvB.jpg", 
+        "answers": [ 
+          { "content":"Ben-Hur", "isCorrect": false},
+          { "content":"Ojciec Chrzestny: Część II", "isCorrect": true},
+          { "content":"Bulwar Zachodzącego słońca", "isCorrect": false}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/oLu1CiCmnTC5o9uBB78DjG8xt2x.jpg", 
+        "answers": [ 
+          { "content":"Ścieżki chwały", "isCorrect": false},
+          { "content":"Samotna dziewczyna", "isCorrect": false},
+          { "content":"Trzeci człowiek", "isCorrect": true}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/zwgDZw9dyrgkYz2RCOb2HvUDlt2.jpg", 
+        "answers": [ 
+          { "content":"Przed zachodem słońca", "isCorrect": true},
+          { "content":"Pan Smith jedzie do Waszyngtonu", "isCorrect": false},
+          { "content":"Dwanaście małp", "isCorrect": false}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/7Nwnmyzrtd0FkcRyPqmdzTPppQa.jpg", 
+        "answers": [ 
+          { "content":"Wilk z Wall Street", "isCorrect": true},
+          { "content":"Skazani na Shawshank", "isCorrect": false},
+          { "content":"Cudowne życie", "isCorrect": false}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/bpV8wn48s82au37QyUJ51S7X2Vf.jpg", 
+        "answers": [ 
+          { "content":"Wojownik", "isCorrect": false},
+          { "content":"Buntownik z wyboru", "isCorrect": true},
+          { "content":"Dotyk zła", "isCorrect": false}
+         ]
+       },    
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/mepkgQAeLXd5SCwdFvHn17lv849.jpg", 
+        "answers": [ 
+          { "content":"Donnie Darko", "isCorrect": false},
+          { "content":"Indiana Jones i ostatnia krucjata", "isCorrect": true},
+          { "content":"Gran Torino", "isCorrect": false}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w500_and_h282_face/zfGeAFqqIPwJ6bvYUrDxQA4Cw9S.jpg", 
+        "answers": [ 
+          { "content":"Nienawiść", "isCorrect": false},
+          { "content":"Gwiezdne wojny: Epizod VI - Powrót Jedi", "isCorrect": true},
+          { "content":"Wielki sen", "isCorrect": false}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/31WFJVYjRZlulIedVWTtCM3KvNb.jpg", 
+        "answers": [ 
+          { "content":"Mad Max: Na drodze gnewu", "isCorrect": false},
+          { "content":"Full Metal Jacket", "isCorrect": false},
+          { "content":"Coś(2011)", "isCorrect": true}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/yPgAHVzCF0yJGhxupwVwknOHdJj.jpg", 
+        "answers": [ 
+          { "content":"Zagadka zbrodni", "isCorrect": false},
+          { "content":"Rashômon", "isCorrect": false},
+          { "content":"Rocky", "isCorrect": true}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/gsR5KLGBDa7oqjPCciKDVuiWfcx.jpg", 
+        "answers": [ 
+          { "content":"Notorious", "isCorrect": false},
+          { "content":"Sokół maltański", "isCorrect": false},
+          { "content":"Labirynt Fauna", "isCorrect": true}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/cX4xeWZ0DebcpFoxCXeKbBOZQs4.jpg", 
+        "answers": [ 
+          { "content":"Wyścig", "isCorrect": false},
+          { "content":"Most na rzece Kwai", "isCorrect": true},
+          { "content":"Generał", "isCorrect": false}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/mor5PrU9cQghuXp7qRw2LedyCRK.jpg", 
+        "answers": [ 
+          { "content":"Skarb Sierra Madre", "isCorrect": false},
+          { "content":"Sieć", "isCorrect": false},
+          { "content":"Skazani na Shawshank", "isCorrect": true}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/cYlqYcJjwRKdvixzSryntq97yuq.jpg", 
+        "answers": [ 
+          { "content":"Poszukiwacze zaginionej arki", "isCorrect": false},
+          { "content":"Życie jest piękne", "isCorrect": false},
+          { "content":"Akira", "isCorrect": true}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w500_and_h282_face/sgO8CWr4aFswY6WlClWu4Stmm9O.jpg", 
+        "answers": [ 
+          { "content":"Żądło", "isCorrect": false},
+          { "content":"Tajemnice Los Angeles", "isCorrect": false},
+          { "content":"Labirynt", "isCorrect": true}
+         ]
+       },     
+       {
+        "image":"https://www.themoviedb.org/t/p/w500_and_h282_face/tgjnfY7gj068308pMcg2T6fT1h7.jpg", 
+        "answers": [ 
+          { "content":"Okręt", "isCorrect": false},
+          { "content":"Fargo", "isCorrect": true},
+          { "content":"Zagadka zbrodni", "isCorrect": false}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/6IRKeatUf21TNhpTwJfxdRfvGEu.jpg", 
+        "answers": [ 
+          { "content":"Indiana Jones i ostatnia krucjata", "isCorrect": false},
+          { "content":"Szczęki", "isCorrect": false},
+          { "content":"Se7en", "isCorrect": true}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/g11nKgir3nIhlG2gIDWIvJeR4fz.jpg", 
+        "answers": [ 
+          { "content":"Życie na podsłuchu", "isCorrect": true},
+          { "content":"Fargo", "isCorrect": false},
+          { "content":"Cena strachu", "isCorrect": false}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/ngqeWyeGsMR8gEGq9qKpTZXk0Pk.jpg", 
+        "answers": [ 
+          { "content":"Harry Potter i Insygnia Śmierci: Część 2", "isCorrect": true},
+          { "content":"Mary i Max", "isCorrect": false},
+          { "content":"Pulp Fiction", "isCorrect": false}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/2NYNmp8goqhFr1Toyx063irCSCg.jpg", 
+        "answers": [ 
+          { "content":"Narzeczona dla księcia", "isCorrect": true},
+          { "content":"Za wszelką cene", "isCorrect": false},
+          { "content":"Obcy", "isCorrect": false}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/jSy5yfOWXeazRWGr9JeGvHJf4q6.jpg", 
+        "answers": [ 
+          { "content":"Rzymskie wakacje", "isCorrect": false},
+          { "content":"Dawno temu w Ameryce", "isCorrect": true},
+          { "content":"W samo południe", "isCorrect": false}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/8yACFuo4OaIiKr9hHFlmPcGalKx.jpg", 
+        "answers": [ 
+          { "content":"Za wszelką cene", "isCorrect": false},
+          { "content":"Mad Max: Na drodze gnewu", "isCorrect": true},
+          { "content":"Incepcja", "isCorrect": false}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/nevS6wjzCxZESvmjJZqdyZ3RNQ6.jpg", 
+        "answers": [ 
+          { "content":"The Big Lebowski", "isCorrect": true},
+          { "content":"Kino Paradiso", "isCorrect": false},
+          { "content":"Ip Man", "isCorrect": false}
+         ]
+       },       
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/d6UxFCGQxpszcf8mwgGjQ3ynqGl.jpg", 
+        "answers": [ 
+          { "content":"Na nabrzeżach", "isCorrect": false},
+          { "content":"Żądło", "isCorrect": false},
+          { "content":"Chłopcy z ferajny", "isCorrect": true}
+         ]
+       },   
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/j2ZvLJyz163MlmBFsoaDYOwxgws.jpg", 
+        "answers": [ 
+          { "content":"Laputa – podniebny zamek", "isCorrect": true},
+          { "content":"Blade Runner", "isCorrect": false},
+          { "content":"Ben-Hur", "isCorrect": false}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/8viWxsL4lwmQZB8QHOCHwMvBGXd.jpg", 
+        "answers": [ 
+          { "content":"Czas Apokalipsy", "isCorrect": true},
+          { "content":"Podejrzani", "isCorrect": false},
+          { "content":"Hotel Rwanda", "isCorrect": false}
+         ]
+       },  
+       {
+        "image":"https://www.themoviedb.org/t/p/w500_and_h282_face/pI9B4wppGflpsOD2T6rxgC5Clmz.jpg", 
+        "answers": [ 
+          { "content":"Milczenie owiec", "isCorrect": true},
+          { "content":"Grób świetlików", "isCorrect": false},
+          { "content":"Hotel Rwanda", "isCorrect": false}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/msCHK5Kh1YbdZ0zPJ2nzPUhhSN9.jpg", 
+        "answers": [ 
+          { "content":"Fargo", "isCorrect": false},
+          { "content":"Wilk z Wall Street", "isCorrect": false},
+          { "content":"Donnie Darko", "isCorrect": true}
+         ]
+       },    
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/7egEp5iprNPy1HXPME6e1UigOJL.jpg", 
+        "answers": [ 
+          { "content":"Oldboy", "isCorrect": true},
+          { "content":"Coś", "isCorrect": false},
+          { "content":"Ojciec Chrzestny", "isCorrect": false}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/yw55hiqnDOwZiXpkraXu114rmGz.jpg", 
+        "answers": [ 
+          { "content":"Szklana pułapka", "isCorrect": true},
+          { "content":"Człowiek słoń", "isCorrect": false},
+          { "content":"Nieznajomi z pociągu", "isCorrect": true}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/fVmSWkJ0dgTtklMw9k2EtYS9WOl.jpg", 
+        "answers": [ 
+          { "content":"Narzeczona dla księcia", "isCorrect": true},
+          { "content":"Chinatown", "isCorrect": false},
+          { "content":"Metropolis", "isCorrect": false}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/hQOycjyDQz1dToGlVJIDPho4kl5.jpg", 
+        "answers": [ 
+          { "content":"Bękarty wojny", "isCorrect": false},
+          { "content":"Życie na podsłuchu", "isCorrect": false},
+          { "content":"Sin City: Miasto grzechu", "isCorrect": true}
+         ]
+       },
+       {
+        "image":"https://www.themoviedb.org/t/p/w533_and_h300_bestv2/2XWhIg0aWX83ntm5Oq8w15vfB9c.jpg", 
+        "answers": [ 
+          { "content":"Trainspotting", "isCorrect": false},
+          { "content":"Buntownik z wyboru", "isCorrect": false},
+          { "content":"Król Lew", "isCorrect": true}
+         ]
+       }
+      
+    ]
+  }
