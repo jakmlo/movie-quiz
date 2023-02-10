@@ -1,0 +1,28 @@
+{
+  "questions": [
+    {
+      "image": "harry_potter.jpg",
+      "anwsers": [
+        { "content": "Harry Potter", "isCorrect": true },
+        { "content": "Władca Pierścieni", "isCorrect": false },
+        { "content": "Gra o Tron", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "madagaskar.jpg",
+      "anwsers": [
+        { "content": "Potwory i Spółka", "isCorrect": false },
+        { "content": "Madagaskar", "isCorrect": true },
+        { "content": "Ratatuj", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "matrix.jpg",
+      "anwsers": [
+        { "content": "Szklana Pułapka", "isCorrect": false },
+        { "content": "Zoolander", "isCorrect": false },
+        { "content": "Matrix", "isCorrect": true }
+      ]
+    }
+  ]
+}
