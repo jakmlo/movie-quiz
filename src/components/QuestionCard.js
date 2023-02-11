@@ -3,8 +3,10 @@ import Image from "./Image";
 import useImage from "../hooks/useImage";
 
 const QuestionCard = (props) => {
-  const { loading, error, image } = useImage(props.src);
-
+  let { loading, error, image } = useImage(props.src);
+  if (props.src.includes("http")) {
+    image = props.src;
+  }
   if (props.dataLoaded) {
     return (
       <>
@@ -12,7 +14,7 @@ const QuestionCard = (props) => {
           <Image src={image} />
         </div>
         <div className="answer-container">
-          {props.question.anwsers.map((option, id) => {
+          {props.question.answers.map((option, id) => {
             return (
               <button
                 key={id}
