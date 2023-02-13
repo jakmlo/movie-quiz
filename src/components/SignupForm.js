@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   auth,
@@ -6,7 +6,6 @@ import {
   facebookProvider,
   githubProvider,
 } from "../service/firebase";
-import { collection, addDoc } from "firebase/firestore";
 import { signInWithPopup, createUserWithEmailAndPassword } from "firebase/auth";
 import GoogleLogo from "../assets/google-icon.svg";
 import FacebookLogo from "../assets/facebook-icon.svg";
@@ -16,12 +15,47 @@ import "./LoginForm.css";
 import ButtonProvider from "./ButtonProvider";
 import EmailInput from "./EmailInput";
 import PasswordInput from "./PasswordInput";
+import ConfirmPasswordInput from "./ConfirmPasswordInput";
 
 const SignupForm = () => {
+  const EMAIL_REGEX = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+  const PASSWORD_REGEX =
+    /^(?=\S*[a-z])(?=\S*[A-Z])(?=\S*\d)(?=\S*[^\w\s])\S{10,24}$/;
+
   const navigate = useNavigate();
-  const [errorMessage, setErrorMessage] = useState("");
+
   const [email, setEmail] = useState("");
+  const [validEmail, setValidEmail] = useState(false);
+  const [emailClicked, setEmailClicked] = useState(false);
+
   const [password, setPassword] = useState("");
+  const [validPassword, setValidPassword] = useState(false);
+  const [passwordClicked, setPasswordClicked] = useState(false);
+
+  const [matchPassword, setMatchPassword] = useState("");
+  const [validMatchPassword, setValidMatchPassword] = useState(false);
+  const [matchPasswordClicked, setMatchPasswordClicked] = useState(false);
+
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const [isSubmited, setIsSubmited] = useState(false);
+
+  // Checking inputs against regex
+  useEffect(() => {
+    const result = EMAIL_REGEX.test(email);
+    setValidEmail(result);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [email]);
+
+  useEffect(() => {
+    const result = PASSWORD_REGEX.test(password);
+    setValidPassword(result);
+    if (password) {
+      const match = password === matchPassword;
+      setValidMatchPassword(match);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [password, matchPassword]);
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -30,20 +64,28 @@ const SignupForm = () => {
     setPassword(e.target.value);
   };
 
+  const handleMatchPassword = (e) => {
+    setMatchPassword(e.target.value);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      navigate("/");
-    } catch (e) {
-      setErrorMessage(e.message);
-      alert(e.message);
+    setIsSubmited(true);
+    if (!EMAIL_REGEX.test(email) || !PASSWORD_REGEX.test(password)) {
+      return;
+    } else {
+      try {
+        await createUserWithEmailAndPassword(auth, email, password);
+        navigate("/");
+      } catch (e) {
+        setErrorMessage(e.message);
+        alert(e.message);
+      }
     }
   };
 
   const handleClick = (provider) => {
-    signInWithPopup(auth, provider).then((data) => {
-      console.log(auth.currentUser.displayName);
+    signInWithPopup(auth, provider).then(() => {
       navigate("/");
     });
   };
@@ -53,7 +95,7 @@ const SignupForm = () => {
         {errorMessage}
       </span>
       <div className="container">
-        <div>
+        <div button-provider-container>
           <ButtonProvider
             src={GoogleLogo}
             handleClick={handleClick}
@@ -73,10 +115,32 @@ const SignupForm = () => {
             name="Github"
           />
         </div>
-        <h2>QuizApp</h2>
+        <h2 className="title">QuizApp</h2>
         <form onSubmit={handleSubmit}>
-          <EmailInput email={email} handleEmail={handleEmail} />
-          <PasswordInput password={password} handlePassword={handlePassword} />
+          <EmailInput
+            email={email}
+            handleEmail={handleEmail}
+            validEmail={validEmail}
+            isSubmited={isSubmited}
+            emailClicked={emailClicked}
+            setEmailClicked={setEmailClicked}
+          />
+          <PasswordInput
+            password={password}
+            handlePassword={handlePassword}
+            validPassword={validPassword}
+            isSubmited={isSubmited}
+            passwordClicked={passwordClicked}
+            setPasswordClicked={setPasswordClicked}
+          />
+          <ConfirmPasswordInput
+            matchPassword={matchPassword}
+            handleMatchPassword={handleMatchPassword}
+            validMatchPassword={validMatchPassword}
+            isSubmited={isSubmited}
+            matchPasswordClicked={matchPasswordClicked}
+            setMatchPasswordClicked={setMatchPasswordClicked}
+          />
           <button className="btn" type="submit">
             Zarejestruj się
           </button>

@@ -23,7 +23,6 @@
 
 .answer-container {
   width: 80%;
-  height: 16rem;
   margin-top: 5rem;
   margin-left: auto;
   margin-right: auto;
@@ -35,6 +34,7 @@
   background-image: linear-gradient(to bottom, #703649, #08010c);
   opacity: 0.76;
   margin: 1rem;
+  margin-bottom: 1rem;
   color: white;
   font-size: medium;
   border-radius: 10px;
@@ -82,4 +82,18 @@
   background-image: linear-gradient(to bottom, #703649, #08010c);
   opacity: 0.65;
   border-radius: 10px;
+}
+
+.back-icon {
+  height: 2rem;
+  width: 2rem;
+  margin: 1rem;
+}
+
+.current-question {
+  text-shadow: 1px 1px 2px #000000;
+  font-size: larger;
+  margin-left: auto;
+  margin-right: 11rem;
+  width: fit-content;
 }

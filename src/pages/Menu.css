@@ -9,6 +9,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   font-size: 24px;
   margin-top: 10rem;
   margin-left: auto;
@@ -32,6 +33,25 @@
 }
 
 .logout-btn:hover {
+  background-image: linear-gradient(to bottom, #703649, #08010c);
+  opacity: 0.65;
+  border-radius: 10px;
+}
+
+.menu-button {
+  width: 80%;
+  padding: 10px 30px;
+  background-image: linear-gradient(to bottom, #703649, #08010c);
+  opacity: 0.76;
+  margin: 1rem;
+  color: white;
+  font-size: medium;
+  border-radius: 10px;
+  transition-duration: 400ms;
+}
+
+.menu-button:hover {
+  padding: 10px 30px;
   background-image: linear-gradient(to bottom, #703649, #08010c);
   opacity: 0.65;
   border-radius: 10px;

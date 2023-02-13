@@ -4,14 +4,20 @@ import "./EmailInput.css";
 const EmailInput = (props) => {
   return (
     <div className="input-container">
-      <label className="email-label">Nazwa użytkownika</label>
+      <label className="email-label">Adres email</label>
       <input
         id="email"
         placeholder="Email"
         value={props.email}
         type="email"
-        className="input"
+        className={
+          (!props.validEmail && props.isSubmited) ||
+          (!props.validEmail && props.emailClicked)
+            ? "warn-input"
+            : "input"
+        }
         onChange={props.handleEmail}
+        onBlur={() => props.setEmailClicked(true)}
       />
     </div>
   );

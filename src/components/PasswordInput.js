@@ -11,7 +11,13 @@ const PasswordInput = (props) => {
         value={props.password}
         type="password"
         onChange={props.handlePassword}
-        className="input"
+        onBlur={() => props.setPasswordClicked(true)}
+        className={
+          (!props.validPassword && props.isSubmited) ||
+          (!props.validPassword && props.passwordClicked)
+            ? "warn-input"
+            : "input"
+        }
       />
     </div>
   );

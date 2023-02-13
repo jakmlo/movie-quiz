@@ -1,12 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "./Image";
 import useImage from "../hooks/useImage";
 
 const QuestionCard = (props) => {
-  let { loading, error, image } = useImage(props.src);
-  if (props.src.includes("http")) {
-    image = props.src;
-  }
+  const { loading, error, image } = useImage(props.src);
   if (props.dataLoaded) {
     return (
       <>

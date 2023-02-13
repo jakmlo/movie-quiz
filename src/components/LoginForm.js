@@ -44,7 +44,9 @@ const LoginForm = () => {
     try {
       await signInWithPopup(auth, provider);
       navigate("/");
-    } catch (e) {}
+    } catch (e) {
+      alert(e.message);
+    }
   };
 
   return (
@@ -73,7 +75,7 @@ const LoginForm = () => {
             name="Github"
           />
         </div>
-        <h2>QuizApp</h2>
+        <h2 className="title">QuizApp</h2>
         <form onSubmit={handleSubmit}>
           <EmailInput email={email} handleEmail={handleEmail} />
           <PasswordInput password={password} handlePassword={handlePassword} />

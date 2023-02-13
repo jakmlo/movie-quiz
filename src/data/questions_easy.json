@@ -1,0 +1,433 @@
+{
+  "questions": [
+    {
+      "image": "harry_potter.jpg",
+      "answers": [
+        { "content": "Harry Potter", "isCorrect": true },
+        { "content": "Władca Pierścieni", "isCorrect": false },
+        { "content": "Gra o Tron", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "madagaskar.jpg",
+      "answers": [
+        { "content": "Potwory i Spółka", "isCorrect": false },
+        { "content": "Madagaskar", "isCorrect": true },
+        { "content": "Ratatuj", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "matrix.jpg",
+      "answers": [
+        { "content": "Szklana Pułapka", "isCorrect": false },
+        { "content": "Zoolander", "isCorrect": false },
+        { "content": "Matrix", "isCorrect": true }
+      ]
+    },
+    {
+      "image": "Kot_w_butach_Ostatnie_życzenie.jpg",
+      "answers": [
+        { "content": "Kot w butach: Ostatnie życzenie", "isCorrect": true },
+        { "content": "Kot w butach", "isCorrect": false },
+        { "content": "Shrek 2", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Czarna_Pantera_Wakanda_w_moim_sercu.jpg",
+      "answers": [
+        {
+          "content": "Czarna Pantera: Wakanda w moim sercu",
+          "isCorrect": true
+        },
+        { "content": "Czarna Pantera", "isCorrect": false },
+        { "content": "Kapitan Ameryka: Wojna Bohaterów", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Avatar_Istota_wody.jpg",
+      "answers": [
+        { "content": "Avatar: Istota wody", "isCorrect": true },
+        { "content": "Avengers", "isCorrect": false },
+        { "content": "Strażnicy Galaktyki 2", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Black_Adam.jpg",
+      "answers": [
+        { "content": "Black Adam", "isCorrect": true },
+        { "content": "Shazam", "isCorrect": false },
+        { "content": "Avengers 2", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Wolf_Hound.jpg",
+      "answers": [
+        { "content": "Wolf Hound", "isCorrect": true },
+        { "content": "Top Gun: Maverick", "isCorrect": false },
+        { "content": "1917", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Avatar.jpg",
+      "answers": [
+        { "content": "Predator", "isCorrect": false },
+        { "content": "Avatar vs Obcy", "isCorrect": false },
+        { "content": "Avatar", "isCorrect": true }
+      ]
+    },
+    {
+      "image": "Troll.jpg",
+      "answers": [
+        { "content": "Troll", "isCorrect": true },
+        { "content": "Tajemnica gór", "isCorrect": false },
+        { "content": "Olbrzym", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Opowieści_z_Narnii_Lew,_Czarownica_i_stara_szafa.jpg",
+      "answers": [
+        { "content": "Opowieści z Narnii", "isCorrect": true },
+        {
+          "content": "Opowieści z Narnii 2: Książe Kaspian",
+          "isCorrect": false
+        },
+        { "content": "Zaczarowana szafa", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Top_Gun_Maverick.jpg",
+      "answers": [
+        { "content": "Top Gun: Maverick", "isCorrect": true },
+        { "content": "1917", "isCorrect": false },
+        { "content": "Battlefield", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Spider_Man_Bez_Drogi_do_Domu.jpg",
+      "answers": [
+        { "content": "Spider Man: Bez Drogi do Domu", "isCorrect": true },
+        { "content": "Spider Man 3", "isCorrect": false },
+        { "content": "Avengers: Koniec gry", "isCorrect": false }
+      ]
+    },
+
+    {
+      "image": "Jak_wytresować_smoka.jpg",
+      "answers": [
+        { "content": "Jak wytresować smoka", "isCorrect": true },
+        { "content": "Upadek", "isCorrect": false },
+        { "content": "Braveheart, Waleczne serce", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Monty_Python_i_Święty_Graal.jpg",
+      "answers": [
+        { "content": "Amadeus", "isCorrect": false },
+        { "content": "Monty Python i Święty Graal", "isCorrect": true },
+        { "content": "Anatomia morderstwa", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "X-Men_Przeszłość,_która_nadejdzie.jpg",
+      "answers": [
+        { "content": "Najlepsze lata naszego życia", "isCorrect": false },
+        { "content": "X-Men: Przeszłość, która nadejdzie", "isCorrect": true },
+        { "content": "Indiana Jones i ostatnia krucjata", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Mechaniczna_pomarańcza.jpg",
+      "answers": [
+        { "content": "Notorious", "isCorrect": false },
+        { "content": "Mechaniczna pomarańcza", "isCorrect": true },
+        { "content": "Full Metal Jacket", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Bez_przebaczenia.jpg",
+      "answers": [
+        { "content": "Bez przebaczenia", "isCorrect": true },
+        { "content": "Coś", "isCorrect": false },
+        { "content": "Persona", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Paryż,_Teksas.jpg",
+      "answers": [
+        { "content": "Zniewolony", "isCorrect": false },
+        { "content": "Stań przy mnie", "isCorrect": false },
+        { "content": "Paryż, Teksas", "isCorrect": true }
+      ]
+    },
+    {
+      "image": "Północ,północny_zachód.jpg",
+      "answers": [
+        { "content": "Tron we krwi", "isCorrect": false },
+        { "content": "Północ,północny zachód", "isCorrect": true },
+        { "content": "Odejście", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Ojciec_Chrzestny_Część_II.jpg",
+      "answers": [
+        { "content": "Ben-Hur", "isCorrect": false },
+        { "content": "Ojciec Chrzestny: Część II", "isCorrect": true },
+        { "content": "Bulwar Zachodzącego słońca", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Trzeci_człowiek.jpg",
+      "answers": [
+        { "content": "Ścieżki chwały", "isCorrect": false },
+        { "content": "Samotna dziewczyna", "isCorrect": false },
+        { "content": "Trzeci człowiek", "isCorrect": true }
+      ]
+    },
+    {
+      "image": "Przed_zachodem_słońca.jpg",
+      "answers": [
+        { "content": "Przed zachodem słońca", "isCorrect": true },
+        { "content": "Pan Smith jedzie do Waszyngtonu", "isCorrect": false },
+        { "content": "Dwanaście małp", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Wilk_z_Wall_Street.jpg",
+      "answers": [
+        { "content": "Wilk z Wall Street", "isCorrect": true },
+        { "content": "Skazani na Shawshank", "isCorrect": false },
+        { "content": "Cudowne życie", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Buntownik_z_wyboru.jpg",
+      "answers": [
+        { "content": "Wojownik", "isCorrect": false },
+        { "content": "Buntownik z wyboru", "isCorrect": true },
+        { "content": "Dotyk zła", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Indiana_Jones_i_ostatnia_krucjata2.jpg",
+      "answers": [
+        { "content": "Donnie Darko", "isCorrect": false },
+        { "content": "Indiana Jones i ostatnia krucjata", "isCorrect": true },
+        { "content": "Gran Torino", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Gwiezdne_wojny_Epizod_VI_-_Powrót_Jedi.jpg",
+      "answers": [
+        { "content": "Nienawiść", "isCorrect": false },
+        {
+          "content": "Gwiezdne wojny: Epizod VI - Powrót Jedi",
+          "isCorrect": true
+        },
+        { "content": "Wielki sen", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Coś.jpg",
+      "answers": [
+        { "content": "Mad Max: Na drodze gnewu", "isCorrect": false },
+        { "content": "Full Metal Jacket", "isCorrect": false },
+        { "content": "Coś(2011)", "isCorrect": true }
+      ]
+    },
+    {
+      "image": "Rocky.jpg",
+      "answers": [
+        { "content": "Zagadka zbrodni", "isCorrect": false },
+        { "content": "Rashômon", "isCorrect": false },
+        { "content": "Rocky", "isCorrect": true }
+      ]
+    },
+    {
+      "image": "Labirynt_Fauna.jpg",
+      "answers": [
+        { "content": "Notorious", "isCorrect": false },
+        { "content": "Sokół maltański", "isCorrect": false },
+        { "content": "Labirynt Fauna", "isCorrect": true }
+      ]
+    },
+    {
+      "image": "Most_na_rzece_Kwai.jpg",
+      "answers": [
+        { "content": "Wyścig", "isCorrect": false },
+        { "content": "Most na rzece Kwai", "isCorrect": true },
+        { "content": "Generał", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Skazani_na_Shawshank.jpg",
+      "answers": [
+        { "content": "Skarb Sierra Madre", "isCorrect": false },
+        { "content": "Sieć", "isCorrect": false },
+        { "content": "Skazani na Shawshank", "isCorrect": true }
+      ]
+    },
+    {
+      "image": "Akira.jpg",
+      "answers": [
+        { "content": "Poszukiwacze zaginionej arki", "isCorrect": false },
+        { "content": "Życie jest piękne", "isCorrect": false },
+        { "content": "Akira", "isCorrect": true }
+      ]
+    },
+    {
+      "image": "Labirynt.jpg",
+      "answers": [
+        { "content": "Żądło", "isCorrect": false },
+        { "content": "Tajemnice Los Angeles", "isCorrect": false },
+        { "content": "Labirynt", "isCorrect": true }
+      ]
+    },
+    {
+      "image": "Fargo.jpg",
+      "answers": [
+        { "content": "Okręt", "isCorrect": false },
+        { "content": "Fargo", "isCorrect": true },
+        { "content": "Zagadka zbrodni", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Se7en.jpg",
+      "answers": [
+        { "content": "Indiana Jones i ostatnia krucjata", "isCorrect": false },
+        { "content": "Szczęki", "isCorrect": false },
+        { "content": "Se7en", "isCorrect": true }
+      ]
+    },
+    {
+      "image": "Życie_na_podsłuchu.jpg",
+      "answers": [
+        { "content": "Życie na podsłuchu", "isCorrect": true },
+        { "content": "Fargo", "isCorrect": false },
+        { "content": "Cena strachu", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Harry_Potter_i_Insygnia_Śmierci_Część_2.jpg",
+      "answers": [
+        {
+          "content": "Harry Potter i Insygnia Śmierci: Część 2",
+          "isCorrect": true
+        },
+        { "content": "Mary i Max", "isCorrect": false },
+        { "content": "Pulp Fiction", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Narzeczona_dla_księcia.jpg",
+      "answers": [
+        { "content": "Narzeczona dla księcia", "isCorrect": true },
+        { "content": "Za wszelką cene", "isCorrect": false },
+        { "content": "Obcy", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Dawno_temu_w_Ameryce.jpg",
+      "answers": [
+        { "content": "Rzymskie wakacje", "isCorrect": false },
+        { "content": "Dawno temu w Ameryce", "isCorrect": true },
+        { "content": "W samo południe", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Mad_Max_Na_drodze_gnewu.jpg",
+      "answers": [
+        { "content": "Za wszelką cene", "isCorrect": false },
+        { "content": "Mad Max: Na drodze gnewu", "isCorrect": true },
+        { "content": "Incepcja", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "The_Big_Lebowski.jpg",
+      "answers": [
+        { "content": "The Big Lebowski", "isCorrect": true },
+        { "content": "Kino Paradiso", "isCorrect": false },
+        { "content": "Ip Man", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Chłopcy_z_ferajny.jpg",
+      "answers": [
+        { "content": "Na nabrzeżach", "isCorrect": false },
+        { "content": "Żądło", "isCorrect": false },
+        { "content": "Chłopcy z ferajny", "isCorrect": true }
+      ]
+    },
+    {
+      "image": "Laputa_-_podniebny_zamek.jpg",
+      "answers": [
+        { "content": "Laputa - podniebny zamek", "isCorrect": true },
+        { "content": "Blade Runner", "isCorrect": false },
+        { "content": "Ben-Hur", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Czas_Apokalipsy.jpg",
+      "answers": [
+        { "content": "Czas Apokalipsy", "isCorrect": true },
+        { "content": "Podejrzani", "isCorrect": false },
+        { "content": "Hotel Rwanda", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Milczenie_owiec.jpg",
+      "answers": [
+        { "content": "Milczenie owiec", "isCorrect": true },
+        { "content": "Grób świetlików", "isCorrect": false },
+        { "content": "Hotel Rwanda", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Donnie_Darko.jpg",
+      "answers": [
+        { "content": "Fargo", "isCorrect": false },
+        { "content": "Wilk z Wall Street", "isCorrect": false },
+        { "content": "Donnie Darko", "isCorrect": true }
+      ]
+    },
+    {
+      "image": "Ojciec_Chrzestny.jpg",
+      "answers": [
+        { "content": "Oldboy", "isCorrect": false },
+        { "content": "Coś", "isCorrect": false },
+        { "content": "Ojciec Chrzestny", "isCorrect": true }
+      ]
+    },
+    {
+      "image": "Szklana_pułapka.jpg",
+      "answers": [
+        { "content": "Szklana pułapka", "isCorrect": true },
+        { "content": "Człowiek słoń", "isCorrect": false },
+        { "content": "Nieznajomi z pociągu", "isCorrect": true }
+      ]
+    },
+    {
+      "image": "Zielony_Szerszeń.jpg",
+      "answers": [
+        { "content": "Zielony Szerszeń", "isCorrect": true },
+        { "content": "Chinatown", "isCorrect": false },
+        { "content": "Metropolis", "isCorrect": false }
+      ]
+    },
+    {
+      "image": "Sin_City.jpg",
+      "answers": [
+        { "content": "Bękarty wojny", "isCorrect": false },
+        { "content": "Życie na podsłuchu", "isCorrect": false },
+        { "content": "Sin City: Miasto grzechu", "isCorrect": true }
+      ]
+    },
+    {
+      "image": "Król_Lew.jpg",
+      "answers": [
+        { "content": "Trainspotting", "isCorrect": false },
+        { "content": "Buntownik z wyboru", "isCorrect": false },
+        { "content": "Król Lew", "isCorrect": true }
+      ]
+    }
+  ]
+}

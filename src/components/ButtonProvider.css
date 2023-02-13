@@ -1,18 +1,11 @@
 .button {
-  width: 80%;
-  height: 50%;
   padding: 4px 6px;
-  margin: 3px 0;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  text-align: right;
-  vertical-align: middle;
+  margin: 1rem;
+  border: none;
+  border-radius: 10px;
 }
 
 .icon {
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
 }
