@@ -55,15 +55,6 @@ const Game = () => {
                 const j = Math.floor(Math.random() * (i + 1));
                 [toShuffle[i], toShuffle[j]] = [toShuffle[j], toShuffle[i]];
               }
-              toShuffle.forEach((question) => {
-                for (let i = question.answers.length - 1; i > 0; i--) {
-                  const j = Math.floor(Math.random() * (i + 1));
-                  [question.answers[i], question.answers[j]] = [
-                    question.answers[j],
-                    question.answers[i],
-                  ];
-                }
-              });
               setSelectedQuestions(toShuffle.slice(0, 10));
             } catch (e) {
               console.log(e.message);
@@ -76,22 +67,13 @@ const Game = () => {
         }
       } else if (level === "hard") {
         try {
-          const response = await import("../data/questions_easy.json");
+          const response = await import("../data/questions_hard.json");
           const shuffleQuestions = async (toShuffle) => {
             try {
               for (let i = toShuffle.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [toShuffle[i], toShuffle[j]] = [toShuffle[j], toShuffle[i]];
               }
-              toShuffle.forEach((question) => {
-                for (let i = question.answers.length - 1; i > 0; i--) {
-                  const j = Math.floor(Math.random() * (i + 1));
-                  [question.answers[i], question.answers[j]] = [
-                    question.answers[j],
-                    question.answers[i],
-                  ];
-                }
-              });
               setSelectedQuestions(toShuffle.slice(0, 10));
             } catch (e) {
               console.log(e.message);
@@ -114,6 +96,38 @@ const Game = () => {
       setCorrectAnswer(true);
       setScore(score + 1);
     }
+    if (currentQuestion + 1 < selectedQuestions.length) {
+      setCurrentQuestion(currentQuestion + 1);
+    } else {
+      setFinalResults(true);
+    }
+  };
+
+  const handleMedium = (e, title, isCorrect) => {
+    e.preventDefault();
+    if (title.toLowerCase() === isCorrect.toLowerCase()) {
+      setCorrectAnswer(true);
+      setScore(score + 1);
+    }
+
+    if (currentQuestion + 1 < selectedQuestions.length) {
+      setCurrentQuestion(currentQuestion + 1);
+    } else {
+      setFinalResults(true);
+    }
+  };
+
+  const handleHard = (e, title, isCorrect, actor, isActorCorrect) => {
+    e.preventDefault();
+    console.log(isActorCorrect.some((element) => element.content === actor));
+    if (
+      title.toLowerCase() === isCorrect.toLowerCase() &&
+      isActorCorrect.some((element) => element.content === actor)
+    ) {
+      setCorrectAnswer(true);
+      setScore(score + 1);
+    }
+
     if (currentQuestion + 1 < selectedQuestions.length) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
@@ -159,7 +173,10 @@ const Game = () => {
                   src={selectedQuestions[currentQuestion].image}
                   question={selectedQuestions[currentQuestion]}
                   currentQuestion={currentQuestion}
+                  level={level}
                   handleClick={handleClick}
+                  handleMedium={handleMedium}
+                  handleHard={handleHard}
                   correctAnswer={correctAnswer}
                   dataLoaded={dataLoaded}
                 />
