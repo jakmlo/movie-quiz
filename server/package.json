@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "express": "^4.16.3",
+    "cors": "^2.8.4",
+    "nodemon": "^2.0.19",
+    "body-parser": "^1.20.0",
+    "mongoose": "^6.5.1",
+    "bcrypt": "^5.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "cookie-parser": "^1.4.6"
+  },
+  "scripts": {
+    "dev": "nodemon",
+    "start": "node index.js"
+  }
+}

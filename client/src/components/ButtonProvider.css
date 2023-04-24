@@ -1,0 +1,12 @@
+.button {
+  padding: 4px 6px;
+  margin: 0.5rem auto;
+  border: none;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+}

@@ -1,0 +1,26 @@
+.game-input {
+  width: 40%;
+  height: 2rem;
+  padding: 4px 6px;
+  color: #703649;
+  font-size: larger;
+  margin-left: 1rem;
+  margin-right: auto;
+  border: 1px solid #703649;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.game-input:focus {
+  outline: none;
+  border: 2px solid #703649;
+}
+
+.next-button {
+  height: 5rem;
+  width: 1rem;
+}
+
+.forward-icon {
+  width: 10%;
+}
