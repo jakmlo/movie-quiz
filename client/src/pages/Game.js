@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import QuestionCard from "../components/QuestionCard";
 import backIcon from "../assets/back-icon.png";
+import { useNavigate } from "react-router-dom";
 
 import "./Game.css";
 
@@ -12,15 +13,20 @@ const Game = () => {
   const [finalResults, setFinalResults] = useState(false);
   const [score, setScore] = useState(0);
   const [selectedQuestions, setSelectedQuestions] = useState([]);
+  const [allQuestions, setAllQuestions] = useState([]);
+  const [count, setCounter] = useState(5);
+  let intervalID = useRef(null);
 
+  const navigate = useNavigate();
   const { state } = useLocation();
-  const { level } = state;
+  const level = state?.level ? state.level : "Początkujący";
 
   useEffect(() => {
     const fetchData = async () => {
-      if (level === "easy") {
+      if (level === "Początkujący") {
         try {
           const response = await import("../data/questions_easy.json");
+          setAllQuestions(response.default.questions);
           const shuffleQuestions = async (toShuffle) => {
             try {
               for (let i = toShuffle.length - 1; i > 0; i--) {
@@ -49,6 +55,7 @@ const Game = () => {
       } else if (level === "medium") {
         try {
           const response = await import("../data/questions_medium.json");
+          setAllQuestions(response.default.questions);
           const shuffleQuestions = async (toShuffle) => {
             try {
               for (let i = toShuffle.length - 1; i > 0; i--) {
@@ -65,9 +72,10 @@ const Game = () => {
         } catch (e) {
           console.log(e.message);
         }
-      } else if (level === "hard") {
+      } else if (level === "Zaawansowany") {
         try {
           const response = await import("../data/questions_hard.json");
+          setAllQuestions(response.default.questions);
           const shuffleQuestions = async (toShuffle) => {
             try {
               for (let i = toShuffle.length - 1; i > 0; i--) {
@@ -86,9 +94,19 @@ const Game = () => {
         }
       }
     };
-
     fetchData();
   }, []);
+
+  useEffect(() => {
+    if (count > 0) {
+      intervalID.current = setInterval(() => {
+        setCounter((currentCount) => {
+          return currentCount - 1;
+        });
+      }, 1000);
+      return () => clearInterval(intervalID.current);
+    }
+  }, [count]);
 
   const handleClick = (e, isCorrect) => {
     e.preventDefault();
@@ -101,6 +119,7 @@ const Game = () => {
     } else {
       setFinalResults(true);
     }
+    setCounter(5);
   };
 
   const handleMedium = (e, title, isCorrect) => {
@@ -119,7 +138,6 @@ const Game = () => {
 
   const handleHard = (e, title, isCorrect, actor, isActorCorrect) => {
     e.preventDefault();
-    console.log(isActorCorrect.some((element) => element.content === actor));
     if (
       title.toLowerCase() === isCorrect.toLowerCase() &&
       isActorCorrect.some((element) => element.content === actor)
@@ -135,28 +153,50 @@ const Game = () => {
     }
   };
 
+  const backToMenu = () => {
+    navigate("/");
+  };
+
   const resetGame = () => {
     setScore(0);
     setFinalResults(false);
     setCurrentQuestion(0);
+    setCounter(5);
+
+    const shuffleQuestions = async (toShuffle) => {
+      try {
+        for (let i = toShuffle.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [toShuffle[i], toShuffle[j]] = [toShuffle[j], toShuffle[i]];
+        }
+        setSelectedQuestions(toShuffle.slice(0, 10));
+      } catch (e) {
+        console.log(e.message);
+      }
+    };
+    shuffleQuestions(allQuestions);
   };
 
   return (
     <>
       {dataLoaded ? (
-        <>
+        <div className="game-wrapper">
           {finalResults ? (
             <>
               <Link to="/">
                 <img src={backIcon} alt="back icon" className="back-icon" />
               </Link>
               <div className="results">
-                <h2>Quiz Game</h2>
-                <h1>Wyniki</h1>
-                <p>
+                <h2 className="game__header">Twój wynik:</h2>
+                <p className="results__score">
                   {score} na {selectedQuestions.length} punktów
                 </p>
-                <button onClick={resetGame}>Spróbuj ponownie</button>
+                <button className="results__button" onClick={resetGame}>
+                  Spróbuj ponownie
+                </button>
+                <button className="results__button" onClick={backToMenu}>
+                  Powrót do menu głównego
+                </button>
               </div>
             </>
           ) : (
@@ -165,25 +205,39 @@ const Game = () => {
                 <img src={backIcon} alt="back icon" className="back-icon" />
               </Link>
               <div className="game-container">
-                <h2>Quiz Game</h2>
-                <span className="current-question">
-                  {`${currentQuestion + 1}/${selectedQuestions.length}`}
-                </span>
-                <QuestionCard
-                  src={selectedQuestions[currentQuestion].image}
-                  question={selectedQuestions[currentQuestion]}
-                  currentQuestion={currentQuestion}
-                  level={level}
-                  handleClick={handleClick}
-                  handleMedium={handleMedium}
-                  handleHard={handleHard}
-                  correctAnswer={correctAnswer}
-                  dataLoaded={dataLoaded}
-                />
+                <h2 className="game__header">{level}</h2>
+                <div className="game__info">
+                  <span className="game__timer">
+                    Pozostały czas: {count} sekund
+                  </span>
+                  <span className="current-question">
+                    {`${currentQuestion + 1}/${selectedQuestions.length}`}
+                  </span>
+                </div>
+                {count > 0 ? (
+                  <QuestionCard
+                    src={selectedQuestions[currentQuestion].image}
+                    question={selectedQuestions[currentQuestion]}
+                    currentQuestion={currentQuestion}
+                    level={level}
+                    handleClick={handleClick}
+                    handleMedium={handleMedium}
+                    handleHard={handleHard}
+                    correctAnswer={correctAnswer}
+                    dataLoaded={dataLoaded}
+                  />
+                ) : (
+                  <>
+                    <h1 className="game__header">Koniec czasu!</h1>
+                    <button className="game__button" onClick={handleClick}>
+                      Następne pytanie
+                    </button>
+                  </>
+                )}
               </div>
             </>
           )}
-        </>
+        </div>
       ) : (
         <p>Loading</p>
       )}

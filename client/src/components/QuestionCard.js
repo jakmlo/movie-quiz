@@ -23,7 +23,7 @@ const QuestionCard = (props) => {
   };
 
   if (props.dataLoaded) {
-    if (props.level === "easy") {
+    if (props.level === "Początkujący") {
       return (
         <>
           <div className="image-container">
@@ -94,7 +94,6 @@ const QuestionCard = (props) => {
                   actor,
                   props.question.Actor_answers
                 );
-                console.log(props.question.Actor_answers);
                 setTitle("");
                 setActor("");
               }}
