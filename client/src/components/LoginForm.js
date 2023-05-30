@@ -4,7 +4,7 @@ import { auth, googleProvider } from "../service/firebase";
 import { signInWithPopup, signInWithEmailAndPassword } from "firebase/auth";
 import GoogleLogo from "../assets/google-icon.svg";
 
-import "./LoginForm.css";
+import "./LoginForm.scss";
 import ButtonProvider from "./ButtonProvider";
 import InputField from "./InputField";
 import Alert from "./Alert";

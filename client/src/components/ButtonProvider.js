@@ -1,5 +1,5 @@
 import React from "react";
-import "./ButtonProvider.css";
+import "./ButtonProvider.scss";
 
 const ButtonProvider = (props) => {
   return (

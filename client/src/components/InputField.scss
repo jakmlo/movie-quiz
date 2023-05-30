@@ -1,0 +1,43 @@
+.input-field {
+  margin-left: auto;
+  margin-right: auto;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    font-size: 11px;
+    text-align: left;
+    margin-left: 2rem;
+    color: aliceblue;
+  }
+
+  &__input {
+    width: 80%;
+    height: 50%;
+    padding: 4px 6px;
+    margin: 3px 0;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    &--invalid {
+      width: 80%;
+      height: 50%;
+      padding: 4px 6px;
+      margin: 3px 0;
+      margin-left: auto;
+      margin-right: auto;
+      border: 3px solid crimson;
+      border-radius: 4px;
+      box-sizing: border-box;
+
+      &:focus {
+        outline: none;
+        border: 4px solid crimson;
+      }
+    }
+  }
+}

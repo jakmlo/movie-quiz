@@ -4,21 +4,29 @@ import { auth, googleProvider } from "../service/firebase";
 import { signInWithPopup, createUserWithEmailAndPassword } from "firebase/auth";
 import GoogleLogo from "../assets/google-icon.svg";
 
-import "./SignupForm.css";
+import "./SignupForm.scss";
 import ButtonProvider from "./ButtonProvider";
 import InputField from "./InputField";
 import Alert from "./Alert";
+import { useAuth } from "../hooks/useAuth";
 
 const SignupForm = () => {
   const EMAIL_REGEX = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+  const USERNAME_REGEX = /^[A-Za-z][A-Za-z0-9_]{4,20}$/;
   const PASSWORD_REGEX =
     /^(?=\S*[a-z])(?=\S*[A-Z])(?=\S*\d)(?=\S*[^\w\s])\S{10,24}$/;
 
   const navigate = useNavigate();
 
+  const { setGlobalUsername } = useAuth();
+
   const [email, setEmail] = useState("");
   const [validEmail, setValidEmail] = useState(false);
   const [emailClicked, setEmailClicked] = useState(false);
+
+  const [username, setUsername] = useState("");
+  const [validUsername, setValidUsername] = useState(false);
+  const [usernameClicked, setUsernameClicked] = useState(false);
 
   const [password, setPassword] = useState("");
   const [validPassword, setValidPassword] = useState(false);
@@ -38,6 +46,12 @@ const SignupForm = () => {
     setValidEmail(result);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [email]);
+
+  useEffect(() => {
+    const result = USERNAME_REGEX.test(username);
+    setValidUsername(result);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [username]);
 
   useEffect(() => {
     const result = PASSWORD_REGEX.test(password);
@@ -60,26 +74,42 @@ const SignupForm = () => {
     setMatchPassword(e.target.value);
   };
 
+  const handleUsername = (e) => {
+    setUsername(e.target.value);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmited(true);
-    if (!EMAIL_REGEX.test(email) && !PASSWORD_REGEX.test(password)) {
+    if (!validEmail && !validPassword && !validUsername) {
       setErrorMessage(
-        "Nieprawidłowy adres email i hasło. Użyj co najmniej 10 znaków w tym: mała litera, wielka litera, cyfra i znak specjalny."
+        "Nieprawidłowe dane. Hasło powinno zawierać co najmniej 10 znaków w tym: mała litera, wielka litera, cyfra i znak specjalny."
       );
-    } else if (!EMAIL_REGEX.test(email)) {
+    } else if (!validEmail) {
       setErrorMessage("Nieprawidłowy adres email.");
-    } else if (!PASSWORD_REGEX.test(password)) {
+    } else if (!validPassword) {
       setErrorMessage(
         "Nieprawidłowe hasło. Użyj co najmniej 10 znaków w tym: mała litera, wielka litera, cyfra i znak specjalny."
+      );
+    } else if (!validMatchPassword) {
+      setErrorMessage("Hasła są różne.");
+    } else if (!validUsername) {
+      setErrorMessage(
+        'Nieprawidłowa nazwa użytkownika. Użyj co najmniej 4-20 znaków. Dozwolone znaki alfanumeryczne i "_"'
       );
     } else {
       try {
         await createUserWithEmailAndPassword(auth, email, password);
+        setGlobalUsername(username);
         navigate("/");
       } catch (e) {
+        console.log(e.message);
         if (e.message === "Firebase: Error (auth/invalid-email).") {
           setErrorMessage("Nieprawidłowy login i/lub hasło.");
+        } else if (
+          e.message === "Firebase: Error (auth/email-already-in-use)."
+        ) {
+          setErrorMessage("Adres email już istnieje.");
         } else {
           setErrorMessage("Błąd logowania.");
         }
@@ -87,12 +117,13 @@ const SignupForm = () => {
     }
     setTimeout(() => {
       setErrorMessage("");
-    }, "5000");
+    }, "10000");
   };
 
   const handleClick = async (provider) => {
     try {
       await signInWithPopup(auth, provider);
+
       navigate("/");
     } catch (e) {
       if (e.message === "Firebase: Error (auth/popup-closed-by-user).") {
@@ -123,6 +154,17 @@ const SignupForm = () => {
             isSubmited={isSubmited}
             inputClicked={emailClicked}
             setInputClicked={setEmailClicked}
+          />
+          <InputField
+            value={username}
+            label="Nazwa użytkownika"
+            type="text"
+            placeholder="Nazwa użytkownika"
+            onChange={handleUsername}
+            validInput={validUsername}
+            isSubmited={isSubmited}
+            inputClicked={usernameClicked}
+            setInputClicked={setUsernameClicked}
           />
           <InputField
             value={password}

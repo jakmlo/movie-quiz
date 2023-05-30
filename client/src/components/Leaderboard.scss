@@ -1,0 +1,28 @@
+.leaderboard {
+  border-collapse: collapse;
+  width: 15rem;
+  background: linear-gradient(
+    to top right,
+    rgba(154, 55, 55, 0.748),
+    rgb(133, 37, 37)
+  );
+  border-radius: 10px;
+
+  &__row {
+    padding: 1rem;
+  }
+
+  &__header {
+    padding: 1rem;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: #ffaa9b;
+  }
+
+  &__data {
+    padding: 8px;
+    color: #f3adad;
+    text-align: center;
+  }
+}

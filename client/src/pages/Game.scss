@@ -1,0 +1,104 @@
+.game {
+  background-color: brown;
+  height: 100vh;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  &__header {
+    text-shadow: 1px 1px 2px #000000;
+    margin: 1rem;
+    color: #ffaa9b;
+  }
+
+  &__timer {
+    text-shadow: 1px 1px 2px #000000;
+    font-size: larger;
+    color: aliceblue;
+    width: fit-content;
+  }
+
+  &__info {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+  }
+
+  &__button {
+    width: 20rem;
+    padding: 10px 30px;
+    background-image: linear-gradient(to bottom, #703649, #08010c);
+    opacity: 0.76;
+    margin: 10rem auto;
+    color: white;
+    text-align: center;
+    font-size: medium;
+    border-radius: 10px;
+    transition-duration: 400ms;
+  }
+}
+
+.results {
+  text-align: center;
+  font-size: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 24rem;
+  border-radius: 5px;
+  background: linear-gradient(
+    to top right,
+    rgba(212, 111, 111, 0.748),
+    rgb(118, 63, 63)
+  );
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 32rem;
+
+  &__leaderboard {
+    position: absolute;
+    top: 4rem;
+    right: 15rem;
+  }
+
+  &__button {
+    width: 20rem;
+    padding: 10px 30px;
+    background-image: linear-gradient(to bottom, #703649, #08010c);
+    opacity: 0.76;
+    margin: 1rem 0 1rem;
+    color: white;
+    text-align: center;
+    font-size: medium;
+    border-radius: 10px;
+    transition-duration: 400ms;
+
+    &:hover {
+      padding: 10px 30px;
+      background-image: linear-gradient(to bottom, #703649, #08010c);
+      opacity: 0.65;
+      border-radius: 10px;
+    }
+  }
+
+  &__score {
+    font-size: 20px;
+    color: #ffaa9b;
+  }
+}
+
+.back-icon {
+  height: 2rem;
+  width: 2rem;
+  margin: 1rem;
+}
+
+.current-question {
+  text-shadow: 1px 1px 2px #000000;
+  font-size: larger;
+  width: fit-content;
+  color: aliceblue;
+}

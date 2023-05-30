@@ -1,0 +1,33 @@
+.ad {
+  height: 45rem;
+  width: 45rem;
+  margin-left: 30rem;
+  margin-right: auto;
+  animation: pulse 2s infinite;
+
+  &__close-button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: black;
+    font-size: 1.5em;
+  }
+
+  &__image {
+    border-radius: 50px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.96);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.96);
+  }
+}

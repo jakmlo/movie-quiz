@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import Image from "./Image";
 import useImage from "../hooks/useImage";
 import forwardIcon from "../assets/forward-icon.png";
-import "./QuestionCard.css";
+import "./QuestionCard.scss";
 
 const QuestionCard = (props) => {
   const { loading, error, image } = useImage(props.src);
@@ -26,13 +26,14 @@ const QuestionCard = (props) => {
     if (props.level === "Początkujący") {
       return (
         <>
-          <div className="image-container">
+          <div className="image__container">
             <Image src={image} />
           </div>
-          <div className="answer-container">
+          <div className="answer__container">
             {props.question.answers.map((option, id) => {
               return (
                 <button
+                  className="answer__button"
                   key={id}
                   onClick={(e) => props.handleClick(e, option.isCorrect)}
                 >
@@ -43,15 +44,15 @@ const QuestionCard = (props) => {
           </div>
         </>
       );
-    } else if (props.level === "medium") {
+    } else if (props.level === "Średniozaawansowany") {
       return (
         <>
-          <div className="image-container">
+          <div className="image__container">
             <Image src={image} />
           </div>
-          <div className="answer-container">
+          <div className="answer__container">
             <form
-              className="game-form"
+              className="answer__form"
               onSubmit={(e) => {
                 props.handleMedium(e, title, props.question.answers[0].content);
                 setTitle("");
@@ -62,30 +63,30 @@ const QuestionCard = (props) => {
                 value={title}
                 autoFocus
                 ref={inputRef}
-                className="game-input"
-                placeholder="Wpisz tytuł filmu"
+                className="answer__input"
+                placeholder="Wpisz tytuł"
                 onChange={handleChange}
               ></input>
-              <button className="next-button" onClick={focus}>
+              <button className="answer__next-button" onClick={focus}>
                 <img
                   src={forwardIcon}
                   alt="forward icon"
-                  className="forward-icon"
+                  className="answer__forward-icon"
                 />
               </button>
             </form>
           </div>
         </>
       );
-    } else if (props.level === "hard") {
+    } else if (props.level === "Zaawansowany") {
       return (
         <>
-          <div className="image-container">
+          <div className="image__container">
             <Image src={image} />
           </div>
-          <div className="answer-container">
+          <div className="answer__container">
             <form
-              className="game-form"
+              className="answer__form"
               onSubmit={(e) => {
                 props.handleHard(
                   e,
@@ -103,22 +104,22 @@ const QuestionCard = (props) => {
                 value={title}
                 autoFocus
                 ref={inputRef}
-                className="game-input"
-                placeholder="Wpisz tytuł filmu"
+                className="answer__input"
+                placeholder="Wpisz tytuł"
                 onChange={handleChange}
               ></input>
               <input
                 key={1}
                 value={actor}
-                className="game-input"
+                className="answer__input"
                 placeholder="Wymień aktora z kadru"
                 onChange={handleActor}
               ></input>
-              <button className="next-button" onClick={focus}>
+              <button className="answer__next-button" onClick={focus}>
                 <img
                   src={forwardIcon}
                   alt="forward icon"
-                  className="forward-icon"
+                  className="answer__forward-icon"
                 />
               </button>
             </form>
