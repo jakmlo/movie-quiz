@@ -9,6 +9,7 @@ import { AuthProvider } from "./context/AuthProvider";
 import "./App.css";
 import Signup from "./pages/Signup";
 import MultiplayerGame from "./pages/MultiplayerGame";
+import Lobby from "./pages/Lobby";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route element={<RequireAuth />}>
               <Route path="/" element={<Menu />} />
               <Route path="/game" element={<Game />} />
+              <Route path="/lobby" element={<Lobby />} />
               <Route path="/multiplayer" element={<MultiplayerGame />} />
             </Route>
 

@@ -18,6 +18,8 @@ import backIcon from "../assets/back-icon.png";
 import forwardIcon from "../assets/forward-icon.png";
 import leaderboardIcon from "../assets/leaderboard-icon.png";
 import circleIcon from "../assets/circle-icon.png";
+import sponsorLogo from "../assets/sponsor-logo.png";
+import tmdbLogo from "../assets/tmdb-logo.png";
 
 import "./MenuContainer.scss";
 
@@ -26,9 +28,11 @@ const MenuContainer = () => {
   const googleProvider = new GoogleAuthProvider();
   const { user, globalUsername } = useAuth();
   const [chooseLevel, IsChooseLevel] = useState(false);
+  const [chooseMultiplayerLevel, IsChooseMultiplayerLevel] = useState(false);
   const [isShown, setIsShown] = useState(false);
   const [userSettings, setUserSettings] = useState(false);
   const [leaderboard, setLeaderboard] = useState(false);
+  const [about, setAbout] = useState(false);
   const [deleteClicked, setDeleteClicked] = useState(false);
   const [level, setLevel] = useState("Początkujący");
 
@@ -57,10 +61,27 @@ const MenuContainer = () => {
     navigate("/game", { state: { level: "Zaawansowany", startValue: 20 } });
   };
 
+  const handleMultiplayerEasy = () => {
+    navigate("/lobby", {
+      state: { level: "Początkujący", startValue: 10 },
+    });
+  };
+
+  const handleMultiplayerMedium = () => {
+    navigate("/lobby", {
+      state: { level: "Średniozaawansowany", startValue: 15 },
+    });
+  };
+
+  const handleMultiplayerHard = () => {
+    navigate("/lobby", { state: { level: "Zaawansowany", startValue: 20 } });
+  };
+
   const handleUserSettingsClick = () => {
     setUserSettings(true);
     setIsShown(false);
     IsChooseLevel(false);
+    setAbout(false);
     setLeaderboard(false);
   };
 
@@ -68,7 +89,16 @@ const MenuContainer = () => {
     setUserSettings(false);
     setIsShown(false);
     IsChooseLevel(false);
+    setAbout(false);
     setLeaderboard(true);
+  };
+
+  const handleAboutClick = () => {
+    setUserSettings(false);
+    setIsShown(false);
+    IsChooseLevel(false);
+    setLeaderboard(false);
+    setAbout(true);
   };
 
   const handleDeleteAccount = async () => {
@@ -91,6 +121,8 @@ const MenuContainer = () => {
     setUserSettings(false);
     IsChooseLevel(false);
     setLeaderboard(false);
+    IsChooseMultiplayerLevel(false);
+    setAbout(false);
   };
 
   const handleEasyLevel = () => {
@@ -106,7 +138,7 @@ const MenuContainer = () => {
   };
 
   const handleMultiplayer = () => {
-    navigate("/multiplayer");
+    IsChooseMultiplayerLevel(true);
   };
 
   return (
@@ -198,6 +230,30 @@ const MenuContainer = () => {
         </div>
       )}
 
+      {about && (
+        <div className="menu-container--about">
+          <h2 className="menu-container__title">Movie Quiz</h2>
+          <p className="menu-container__header">O aplikacji</p>
+          <p className="menu-container__version">Wersja 0.1.0</p>
+          <p className="menu-container__header">Sponsorzy</p>
+          <img
+            className="menu-container__logo"
+            alt="Logo Sponsora"
+            src={sponsorLogo}
+          />
+          <p className="menu-container__header">Autorzy</p>
+          <p className="menu-container__version">Marcin Borowski</p>
+          <p className="menu-container__version">Jakub Młot</p>
+          <p className="menu-container__version">Anna Rzucidło</p>
+          <p className="menu-container__header">Dostawca API</p>
+          <img
+            className="menu-container__tmdb-logo"
+            alt="Logo TMDB"
+            src={tmdbLogo}
+          />
+        </div>
+      )}
+
       {leaderboard && (
         <div className="menu-container--leaderboard">
           <h2 className="menu-container__title">Movie Quiz</h2>
@@ -229,20 +285,24 @@ const MenuContainer = () => {
         </div>
       )}
 
-      {!userSettings && !leaderboard && !chooseLevel && (
-        <div className="menu-container">
-          <h2 className="menu-container__title">Movie Quiz</h2>
-          <button onClick={handleMultiplayer} className="menu-button">
-            Gra wieloosobowa
-          </button>
-          <button onClick={handleChooseLevel} className="menu-button">
-            Gra jednoosobowa
-          </button>
-          <button onClick={handleLeaderboardClick} className="menu-button">
-            Ranking
-          </button>
-        </div>
-      )}
+      {!userSettings &&
+        !leaderboard &&
+        !chooseLevel &&
+        !chooseMultiplayerLevel &&
+        !about && (
+          <div className="menu-container">
+            <h2 className="menu-container__title">Movie Quiz</h2>
+            <button onClick={handleMultiplayer} className="menu-button">
+              Gra wieloosobowa
+            </button>
+            <button onClick={handleChooseLevel} className="menu-button">
+              Gra jednoosobowa
+            </button>
+            <button onClick={handleLeaderboardClick} className="menu-button">
+              Ranking
+            </button>
+          </div>
+        )}
       {chooseLevel && (
         <div className="menu-container">
           <h2 className="menu-container__title">Movie Quiz</h2>
@@ -257,6 +317,23 @@ const MenuContainer = () => {
           </button>
         </div>
       )}
+      {chooseMultiplayerLevel && (
+        <div className="menu-container">
+          <h2 className="menu-container__title">Movie Quiz</h2>
+          <button onClick={handleMultiplayerEasy} className="menu-button">
+            Początkujący
+          </button>
+          <button onClick={handleMultiplayerMedium} className="menu-button">
+            Średniozaawansowany
+          </button>
+          <button onClick={handleMultiplayerHard} className="menu-button">
+            Zaawansowany
+          </button>
+        </div>
+      )}
+      <span className="menu-container__about" onClick={handleAboutClick}>
+        O aplikacji
+      </span>
     </>
   );
 };

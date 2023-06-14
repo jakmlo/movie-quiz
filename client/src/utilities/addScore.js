@@ -12,7 +12,6 @@ import { db } from "../service/firebase";
 const addScore = async (displayName, score, level) => {
   try {
     // Tworzenie zapytania do Firestore, które zwraca wyniki quizów o podanym imieniu
-    console.log(displayName);
     const q = query(
       collection(db, "leaderboard"),
       where("name", "==", displayName),
@@ -20,14 +19,10 @@ const addScore = async (displayName, score, level) => {
       limit(1)
     );
     const querySnapshot = await getDocs(q);
-    console.log(querySnapshot);
-    console.log(score);
 
     if (!querySnapshot.empty) {
       const doc = querySnapshot.docs[0];
       const currentScore = doc.data().score;
-
-      console.log(currentScore);
 
       // Porównanie nowego wyniku z obecnym wynikiem
       if (score > currentScore) {

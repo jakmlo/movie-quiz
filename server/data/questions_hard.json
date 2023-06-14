@@ -1,0 +1,345 @@
+{
+  "questions": [
+    {
+      "image": "harry_potter.jpg",
+      "answers": [{ "content": "Harry Potter1", "isCorrect": true }],
+      "Actor_answers": [
+        { "content": "Daniel Radcliffe" },
+        { "content": "Emma Watson" },
+        { "content": "Rupert Grint" }
+      ]
+    },
+    {
+      "image": "matrix.jpg",
+      "answers": [{ "content": "Matrix", "isCorrect": true }],
+      "Actor_answers": [
+        { "content": "Keanu Reeves" },
+        { "content": "Carrie Anne Moss" }
+      ]
+    },
+    {
+      "image": "Czarna_Pantera_Wakanda_w_moim_sercu.jpg",
+      "answers": [
+        { "content": "Czarna Pantera: Wakanda w moim sercu", "isCorrect": true }
+      ],
+      "Actor_answers": [{ "content": "Letitia Wright" }]
+    },
+    {
+      "image": "Avatar_Istota_wody.jpg",
+      "answers": [{ "content": "Avatar: Istota wody", "isCorrect": true }],
+      "Actor_answers": [{ "content": "Sam Worthington" }]
+    },
+    {
+      "image": "Black_Adam.jpg",
+      "answers": [{ "content": "Black Adam", "isCorrect": true }],
+      "Actor_answers": [
+        { "content": "Dwayne Johnson" },
+        { "content": "Aldis Hodge" }
+      ]
+    },
+    {
+      "image": "Wolf_Hound.jpg",
+      "answers": [{ "content": "Wolf Hound", "isCorrect": true }],
+      "Actor_answers": [
+        { "content": "Aleksandr Bukharov" },
+        { "content": "Igor Pietrienko" },
+        { "content": "Aleksandr Domogarov" }
+      ]
+    },
+    {
+      "image": "Avatar.jpg",
+      "answers": [{ "content": "Avatar", "isCorrect": true }],
+      "Actor_answers": [
+        { "content": "Sam Worthington" },
+        { "content": "Zoe Saldana" }
+      ]
+    },
+    {
+      "image": "Opowieści_z_Narnii_Lew,_Czarownica_i_stara_szafa.jpg",
+      "answers": [
+        {
+          "content": "Opowieści z Narnii: Lew, Czarownica i stara szafa",
+          "isCorrect": true
+        }
+      ],
+      "Actor_answers": [{ "content": "Georgie Henley" }]
+    },
+    {
+      "image": "Top_Gun_Maverick.jpg",
+      "answers": [{ "content": "Top Gun: Maverick", "isCorrect": true }],
+      "Actor_answers": [{ "content": "Tom Cruise" }]
+    },
+    {
+      "image": "Spider_Man_Bez_Drogi_do_Domu.jpg",
+      "answers": [
+        { "content": "Spider Man: Bez Drogi do Domu", "isCorrect": true }
+      ],
+      "Actor_answers": [
+        { "content": "Benedict Cumberbatch" },
+        { "content": "Tom Holland" }
+      ]
+    },
+    {
+      "image": "X-Men_Przeszłość,_która_nadejdzie.jpg",
+      "answers": [
+        { "content": "X-Men: Przeszłość, która nadejdzie", "isCorrect": true }
+      ],
+      "Actor_answers": [
+        { "content": "Hugh Jackman" },
+        { "content": "Michael Fassbender" },
+        { "content": "Patrick Stewart" },
+        { "content": "Jennifer Lawrence" },
+        { "content": "Nicholas Hoult" },
+        { "content": "Anna Paquin" },
+        { "content": "Halle Berry" },
+        { "content": "Josh Hellman" },
+        { "content": "Daniel Cudmore" }
+      ]
+    },
+    {
+      "image": "Mechaniczna_pomarańcza.jpg",
+      "answers": [{ "content": "Mechaniczna pomarańcza", "isCorrect": true }],
+      "Actor_answers": [
+        { "content": "Malcolm McDowell" },
+        { "content": "Warren Clarke" },
+        { "content": "Paul Farrell" },
+        { "content": "James Marcus" },
+        { "content": "Michael Tarn" }
+      ]
+    },
+    {
+      "image": "Bez_przebaczenia.jpg",
+      "answers": [{ "content": "Bez przebaczenia", "isCorrect": true }],
+      "Actor_answers": [
+        { "content": "Clint Eastwood" },
+        { "content": "Morgan Freeman" }
+      ]
+    },
+    {
+      "image": "Paryż,_Teksas.jpg",
+      "answers": [{ "content": "Paryż, Teksas", "isCorrect": true }],
+      "Actor_answers": [{ "content": "Nastassja Kinski" }]
+    },
+    {
+      "image": "Północ,północny_zachód.jpg",
+      "answers": [{ "content": "Północ,północny zachód", "isCorrect": true }],
+      "Actor_answers": [
+        { "content": "Cary Grant " },
+        { "content": "Baynes Barron " },
+        { "content": "Doreen Lang " }
+      ]
+    },
+    {
+      "image": "Ojciec_Chrzestny_Część_II.jpg",
+      "answers": [
+        { "content": "Ojciec Chrzestny: Część II", "isCorrect": true }
+      ],
+      "Actor_answers": [{ "content": "Al Pacino" }]
+    },
+    {
+      "image": "Trzeci_człowiek.jpg",
+      "answers": [{ "content": "Trzeci człowiek", "isCorrect": true }],
+      "Actor_answers": [{ "content": "Orson Welles" }]
+    },
+    {
+      "image": "Przed_zachodem_słońca.jpg",
+      "answers": [{ "content": "Przed zachodem słońca", "isCorrect": true }],
+      "Actor_answers": [
+        { "content": "Ethan Hawke" },
+        { "content": "Julie Delpy" }
+      ]
+    },
+    {
+      "image": "Wilk_z_Wall_Street.jpg",
+      "answers": [{ "content": "Wilk z Wall Street", "isCorrect": true }],
+      "Actor_answers": [{ "content": "Leonardo DiCaprio" }]
+    },
+    {
+      "image": "Buntownik_z_wyboru.jpg",
+      "answers": [{ "content": "Buntownik z wyboru", "isCorrect": true }],
+      "Actor_answers": [
+        { "content": "Matt Damon" },
+        { "content": "Robin WIlliams" }
+      ]
+    },
+    {
+      "image": "Indiana_Jones_i_ostatnia_krucjata2.jpg",
+      "answers": [
+        { "content": "Indiana Jones i ostatnia krucjata", "isCorrect": true }
+      ],
+      "Actor_answers": [
+        { "content": "Sean Connery" },
+        { "content": "Harrison Ford" }
+      ]
+    },
+    {
+      "image": "Gwiezdne_wojny_Epizod_VI_-_Powrót_Jedi.jpg",
+      "answers": [
+        {
+          "content": "Gwiezdne wojny: Epizod VI - Powrót Jedi",
+          "isCorrect": true
+        }
+      ],
+      "Actor_answers": [
+        { "content": "Mark Hamill" },
+        { "content": "David Prowse" }
+      ]
+    },
+    {
+      "image": "Coś.jpg",
+      "answers": [{ "content": "Coś(2011)", "isCorrect": true }],
+      "Actor_answers": [
+        { "content": "Adewale Akinnuoye-Agbaje" },
+        { "content": "Joel Edgerton" }
+      ]
+    },
+    {
+      "image": "Rocky.jpg",
+      "answers": [{ "content": "Rocky", "isCorrect": true }],
+      "Actor_answers": [
+        { "content": "Sylwester Stallone" },
+        { "content": "Carl Weathers" }
+      ]
+    },
+    {
+      "image": "Most_na_rzece_Kwai.jpg",
+      "answers": [{ "content": "Most na rzece Kwai", "isCorrect": true }],
+      "Actor_answers": [
+        { "content": "Alec Guinness" },
+        { "content": "Sessue Hayakawa" }
+      ]
+    },
+    {
+      "image": "Skazani_na_Shawshank.jpg",
+      "answers": [{ "content": "Skazani na Shawshank", "isCorrect": true }],
+      "Actor_answers": [
+        { "content": "Morgan Freeman" },
+        { "content": "William Sadler" },
+        { "content": "Larry Brandenburg" },
+        { "content": "Neil Giuntoli" },
+        { "content": "Brian Libby" },
+        { "content": "David Proval" },
+        { "content": "Joseph Ragno" }
+      ]
+    },
+    {
+      "image": "Labirynt.jpg",
+      "answers": [{ "content": "Labirynt", "isCorrect": true }],
+      "Actor_answers": [
+        { "content": "Jake Gyllenhaal" },
+        { "content": "Hugh Jackman" },
+        { "content": "Denis Villeneuve" }
+      ]
+    },
+    {
+      "image": "Fargo.jpg",
+      "answers": [{ "content": "Fargo", "isCorrect": true }],
+      "Actor_answers": [{ "content": "Frances McDormand" }]
+    },
+    {
+      "image": "Se7en.jpg",
+      "answers": [{ "content": "Se7en", "isCorrect": true }],
+      "Actor_answers": [
+        { "content": "Brad Pitt" },
+        { "content": "Morgan Freeman" },
+        { "content": "Kevin Spacey" }
+      ]
+    },
+    {
+      "image": "Życie_na_podsłuchu.jpg",
+      "answers": [{ "content": "Życie na podsłuchu", "isCorrect": true }],
+      "Actor_answers": [{ "content": "Ulrich Muhe" }]
+    },
+    {
+      "image": "Harry_Potter_i_Insygnia_Śmierci_Część_2.jpg",
+      "answers": [
+        {
+          "content": "Harry Potter i Insygnia Śmierci: Część 2",
+          "isCorrect": true
+        }
+      ],
+      "Actor_answers": [
+        { "content": "Daniel Radcliffe" },
+        { "content": "Ralph Fiennes" }
+      ]
+    },
+    {
+      "image": "Narzeczona_dla_księcia.jpg",
+      "answers": [{ "content": "Narzeczona dla księcia", "isCorrect": true }],
+      "Actor_answers": [
+        { "content": "Mandy Patinkin" },
+        { "content": "Cary Elwes" }
+      ]
+    },
+    {
+      "image": "Dawno_temu_w_Ameryce.jpg",
+      "answers": [{ "content": "Dawno temu w Ameryce", "isCorrect": true }],
+      "Actor_answers": [
+        { "content": "Robert De Niro" },
+        { "content": "James Woods" },
+        { "content": "William Forsythe" },
+        { "content": "James Hayden" },
+        { "content": "Larry Rapp" }
+      ]
+    },
+    {
+      "image": "The_Big_Lebowski.jpg",
+      "answers": [{ "content": "The Big Lebowski", "isCorrect": true }],
+      "Actor_answers": [{ "content": "Jeff Bridges" }]
+    },
+    {
+      "image": "Chłopcy_z_ferajny.jpg",
+      "answers": [{ "content": "Chłopcy z ferajny", "isCorrect": true }],
+      "Actor_answers": [
+        { "content": "Robert De Niro" },
+        { "content": "Ray Liotta" },
+        { "content": "Joe Pesci" },
+        { "content": "Paul Sorvino" }
+      ]
+    },
+    {
+      "image": "Czas_Apokalipsy.jpg",
+      "answers": [{ "content": "Czas Apokalipsy", "isCorrect": true }],
+      "Actor_answers": [{ "content": "Robert Duvall" }]
+    },
+    {
+      "image": "Milczenie_owiec.jpg",
+      "answers": [{ "content": "Milczenie owiec", "isCorrect": true }],
+      "Actor_answers": [
+        { "content": "Anthony Hopkins" },
+        { "content": "Jodie Foster" }
+      ]
+    },
+    {
+      "image": "Donnie_Darko.jpg",
+      "answers": [{ "content": "Donnie Darko", "isCorrect": true }],
+      "Actor_answers": [
+        { "content": "Jake Gyllenhaal" },
+        { "content": "Jena Malone" }
+      ]
+    },
+    {
+      "image": "Ojciec_Chrzestny.jpg",
+      "answers": [{ "content": "Ojciec Chrzestny", "isCorrect": true }],
+      "Actor_answers": [{ "content": "Marlon Brando" }]
+    },
+    {
+      "image": "Szklana_pułapka.jpg",
+      "answers": [{ "content": "Szklana pułapka", "isCorrect": true }],
+      "Actor_answers": [{ "content": "Bruce Willis" }]
+    },
+    {
+      "image": "Zielony_Szerszeń.jpg",
+      "answers": [{ "content": "Zielony Szerszeń", "isCorrect": true }],
+      "Actor_answers": [{ "content": "Seth Rogen" }, { "content": "Jay Chou" }]
+    },
+    {
+      "image": "Sin_City.jpg",
+      "answers": [{ "content": "Sin City: Miasto grzechu", "isCorrect": true }],
+      "Actor_answers": [
+        { "content": "Mickey Rourke" },
+        { "content": "Carla Gugino" }
+      ]
+    }
+  ]
+}

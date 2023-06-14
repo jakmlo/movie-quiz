@@ -5,6 +5,7 @@ import backIcon from "../assets/back-icon.png";
 import { useNavigate } from "react-router-dom";
 import Ad from "../components/Ad";
 import addScore from "../utilities/addScore";
+import shuffleQuestions from "../utilities/shuffleQuestions";
 import { useAuth } from "../hooks/useAuth";
 
 import "./Game.scss";
@@ -36,7 +37,7 @@ const Game = () => {
         try {
           const response = await import("../data/questions_easy.json");
           setAllQuestions(response.default.questions);
-          const shuffleQuestions = async (toShuffle) => {
+          const shuffleEasyQuestions = async (toShuffle) => {
             try {
               for (let i = toShuffle.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
@@ -56,7 +57,7 @@ const Game = () => {
               console.log(e.message);
             }
           };
-          shuffleQuestions(response.default.questions);
+          shuffleEasyQuestions(response.default.questions);
           setDataLoaded(true);
         } catch (e) {
           console.log(e.message);
@@ -65,18 +66,7 @@ const Game = () => {
         try {
           const response = await import("../data/questions_medium.json");
           setAllQuestions(response.default.questions);
-          const shuffleQuestions = async (toShuffle) => {
-            try {
-              for (let i = toShuffle.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [toShuffle[i], toShuffle[j]] = [toShuffle[j], toShuffle[i]];
-              }
-              setSelectedQuestions(toShuffle.slice(0, 10));
-            } catch (e) {
-              console.log(e.message);
-            }
-          };
-          shuffleQuestions(response.default.questions);
+          shuffleQuestions(response.default.questions, setSelectedQuestions);
           setDataLoaded(true);
         } catch (e) {
           console.log(e.message);
@@ -85,18 +75,7 @@ const Game = () => {
         try {
           const response = await import("../data/questions_hard.json");
           setAllQuestions(response.default.questions);
-          const shuffleQuestions = async (toShuffle) => {
-            try {
-              for (let i = toShuffle.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [toShuffle[i], toShuffle[j]] = [toShuffle[j], toShuffle[i]];
-              }
-              setSelectedQuestions(toShuffle.slice(0, 10));
-            } catch (e) {
-              console.log(e.message);
-            }
-          };
-          shuffleQuestions(response.default.questions);
+          shuffleQuestions(response.default.questions, setSelectedQuestions);
           setDataLoaded(true);
         } catch (e) {
           console.log(e.message);
@@ -125,11 +104,11 @@ const Game = () => {
     }
     if (currentQuestion + 1 < selectedQuestions.length) {
       setCurrentQuestion(currentQuestion + 1);
+      setCounter(10);
     } else {
       setFinalResults(true);
       addScore(user?.displayName || globalUsername, score + 1, level);
     }
-    setCounter(10);
   };
 
   const handleMedium = (e, title, isCorrect) => {
@@ -141,11 +120,13 @@ const Game = () => {
 
     if (currentQuestion + 1 < selectedQuestions.length) {
       setCurrentQuestion(currentQuestion + 1);
+      setCounter(15);
     } else {
       setFinalResults(true);
-      addScore(user?.displayName || globalUsername, score, level);
+      setTimeout(() => {
+        addScore(user?.displayName || globalUsername, score, level);
+      }, 1000);
     }
-    setCounter(15);
   };
 
   const handleHard = (e, title, isCorrect, actor, isActorCorrect) => {
@@ -160,11 +141,13 @@ const Game = () => {
 
     if (currentQuestion + 1 < selectedQuestions.length) {
       setCurrentQuestion(currentQuestion + 1);
+      setCounter(20);
     } else {
       setFinalResults(true);
-      addScore(user?.displayName || globalUsername, score, level);
+      setTimeout(() => {
+        addScore(user?.displayName || globalUsername, score, level);
+      }, 1000);
     }
-    setCounter(20);
   };
 
   const handleAd = () => {
@@ -180,19 +163,7 @@ const Game = () => {
     setFinalResults(false);
     setCurrentQuestion(0);
     setShowAd(true);
-
-    const shuffleQuestions = async (toShuffle) => {
-      try {
-        for (let i = toShuffle.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [toShuffle[i], toShuffle[j]] = [toShuffle[j], toShuffle[i]];
-        }
-        setSelectedQuestions(toShuffle.slice(0, 10));
-      } catch (e) {
-        console.log(e.message);
-      }
-    };
-    shuffleQuestions(allQuestions);
+    shuffleQuestions(allQuestions, setSelectedQuestions);
     if (level === "Początkujący") {
       setCounter(10);
     } else if (level === "Średniozaawansowany") {
